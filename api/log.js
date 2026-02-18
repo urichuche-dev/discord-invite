@@ -4,7 +4,7 @@ export default async function handler(req, res) {
     const { server } = req.query; // Sabemos a qué servidor intentaba entrar
 
     // 2. CONFIGURA AQUÍ TU WEBHOOK DE DISCORD
-    const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1473725067006574632/S0nmrPxaLN7Bij5Ng00dW5vsoUwCrI6JAslmTOK-f23gJoIfaYRQ1qpaGCWLtXHK2mWY";
+    const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK;
 
     const logData = {
         embeds: [{
