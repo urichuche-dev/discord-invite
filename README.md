@@ -1,5 +1,4 @@
 # discord-invite
-¡Claro! Aquí tienes una documentación profesional y un `README.md` listo para copiar en tu repositorio de GitHub. He estructurado todo para que cualquier colaborador (o tú mismo en el futuro) entienda cómo funciona el sistema de un vistazo.
 
 ---
 
