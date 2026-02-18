@@ -1,19 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <title>Mi Servidor de Discord</title>
-    <meta property="og:title" content="¡Únete a nuestra comunidad!" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Invitaciones | Discord</title>
     
-    <meta property="og:description" content="Haz clic aquí para entrar al servidor y empezar a charlar con nosotros." />
-    
-    <meta property="og:url" content="https://discord-invite-delta.vercel.app/" />
-    
-    <meta property="og:image" content="https://discord-invite-delta.vercel.app/preview-image.png" />
-    
+    <meta property="og:title" content="Portal de Invitaciones" />
+    <meta property="og:description" content="Accede a nuestros servidores oficiales de Discord desde aquí." />
+    <meta property="og:image" content="https://tu-app.vercel.app/assets/logo.png" />
     <meta name="theme-color" content="#00FF66">
 
-    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        * { font-family: 'Avenir', Helvetica, Arial, sans-serif; box-sizing: border-box; }
+        
+        body {
+            background-color: #23272a;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .hero {
+            padding: 40px 20px;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 20px 0 10px;
+            letter-spacing: -1px;
+        }
+
+        p {
+            color: #b9bbbe;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Contenedor del Logo con tu animación original */
+        .discord-logo-container {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .discord-logo-container:hover {
+            transform: scale(1.05);
+        }
+
+        .discord-logo {
+            transform: scale(0.9);
+            transform-origin: 24px 24px;
+        }
+
+        /* Estilos de Animación Swirl (tu código) */
+        .swirl-animation .discord-outer-layer,
+        .swirl-animation .discord-middle-layer,
+        .swirl-animation .discord-inner-layer {
+            transition: transform 800ms cubic-bezier(0.7, 1, 0.7, 1);
+            transform-origin: 50% 50%;
+        }
+
+        .discord-logo-container:hover .swirl-animation .discord-outer-layer { transform: scale(1.5) rotate(360deg); }
+        .discord-logo-container:hover .swirl-animation .discord-middle-layer { transform: scale(1.4) rotate(360deg); }
+        .discord-logo-container:hover .swirl-animation .discord-inner-layer { transform: scale(1.3) rotate(360deg); }
+        .discord-logo-container:hover .swirl-animation .discord-original { visibility: hidden; }
+
+        /* Botón principal */
+        .main-button {
+            display: inline-block;
+            background-color: #00FF66;
+            color: #23272a;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 900;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 255, 102, 0.2);
+        }
+
+        .main-button:hover {
+            background-color: #00e65c;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 255, 102, 0.4);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.8rem;
+            color: #72767d;
+        }
+    </style>
 </head>
 <body>
+
+    <div class="hero">
+        <div class="discord-logo-container">
+            <svg color="#00FF66" fill="#ADBE2C" width="180" height="180" viewBox="0 0 48 48" class="discord-logo">
+                <rect width="100%" height="100%" fill="transparent"></rect>
+                <defs>
+                    <g>
+                        <defs>
+                            <path id="discord-def-face" fill="currentcolor" d="M40,12C40,12,35.415,8.412,30,8L29.512,8.976C34.408,10.174,36.654,11.891,39,14C34.955,11.935,30.961,10,24,10S13.045,11.935,9,14C11.346,11.891,14.018,9.985,18.488,8.976L18,8C12.319,8.537,8,12,8,12S2.879,19.425,2,34C7.162,39.953,15,40,15,40L16.639,37.815C13.857,36.848,10.715,35.121,8,32C11.238,34.45,16.125,37,24,37S36.762,34.45,40,32C37.285,35.121,34.143,36.848,31.361,37.815L33,40C33,40,40.838,39.953,46,34C45.121,19.425,40,12,40,12Z"></path>
+                            <g id="discord-def-face-eyes">
+                                <path id="discord-def-face-left-eye" fill="#23272a" d="M17.5,30C15.567,30,14,28.209,14,26C14,23.791,15.567,22,17.5,22S21,23.791,21,26C21,28.209,19.433,30,17.5,30Z"></path>
+                                <path id="discord-def-face-right-eye" fill="#23272a" d="M30.5,30C28.567,30,27,28.209,27,26C27,23.791,28.567,22,30.5,22S34,23.791,34,26C34,28.209,32.433,30,30.5,30Z"></path>
+                            </g>
+                        </defs>
+                        <g id="discordFaceID40">
+                            <use href="#discord-def-face"></use>
+                            <g class="discord-eyes"><use xlink:href="#discord-def-face-eyes"></use></g>
+                        </g>
+                        <mask id="mask-outer-layer"><rect width="100%" height="100%" fill="#FFFFFF"></rect><circle r="42%" cx="50%" cy="50%" fill="#000000"></circle></mask>
+                        <mask id="mask-middle-layer"><rect width="100%" height="100%" fill="#000000"></rect><circle r="43%" cx="50%" cy="50%" fill="#FFFFFF"></circle><circle r="32%" cx="50%" cy="50%" fill="#000000"></circle></mask>
+                        <mask id="mask-inner-layer"><rect width="100%" height="100%" fill="#000000"></rect><circle r="32%" cx="50%" cy="50%" fill="#FFFFFF"></circle></mask>
+                    </g>
+                </defs>
+                <g class="discord-logo swirl-animation">
+                    <use class="discord-original" xlink:href="#discordFaceID40"></use>
+                    <use class="discord-inner-layer" xlink:href="#discordFaceID40" mask="url(#mask-inner-layer)"></use>
+                    <use class="discord-middle-layer" xlink:href="#discordFaceID40" mask="url(#mask-middle-layer)"></use>
+                    <use class="discord-outer-layer" xlink:href="#discordFaceID40" mask="url(#mask-outer-layer)"></use>
+                </g>
+            </svg>
+        </div>
+
+        <h1>Portal de Invitaciones</h1>
+        <p>Bienvenido. Estás en el sistema de redirección de enlaces. Para unirte a un servidor específico, utiliza el enlace directo proporcionado por la administración.</p>
+        
+        <a href="https://discord.com" class="main-button">Ir a Discord</a>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Portal de Invitaciones Personalizado
+    </div>
+
 </body>
 </html>
