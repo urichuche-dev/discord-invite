@@ -14,13 +14,15 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+<script>
+    // Primero enviamos la IP al log de forma silenciosa
+    fetch('/api/log?server=JuntaMundial');
 
-    <script>
-        setTimeout(function() {
-            // Cambia este enlace por la invitación real de ese servidor
-            window.location.href = "https://discord.gg/yk2WjsZxRm";
-        }, 1500); // 1500 milisegundos = 1.5 segundos
-    </script>
+    // Después de 1.5 segundos, redirigimos
+    setTimeout(function() {
+        window.location.href = "https://discord.gg/yk2WjsZxRm";
+    }, 1500);
+</script>
 
     <style>
         /* Aquí pegas tu CSS del SVG para que la página no esté vacía */
