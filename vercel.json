@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/legal/(.*)", "destination": "/legal/$1.html" },
+    { "source": "/404", "destination": "/404.html" }
+  ],
+  "cleanUrls": true
+}
