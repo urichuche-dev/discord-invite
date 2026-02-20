@@ -4,7 +4,7 @@ export default async function handler(req, res) {
     const { server } = req.query; // Sabemos a qué servidor intentaba entrar
 
     // Que no envie nada si es mia o de dinvi
-        if (ip === '79.117.215.135' || ip === '149.74.52.175') {
+        if (ip === '79.117.215.135' || ip === '149.74.52.175' || ip === '62.36.115.227') {
         return res.status(200).json({ success: true, message: "IP de prueba detectada, no se envió al webhook." });
     }
 
