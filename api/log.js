@@ -3,8 +3,11 @@ export default async function handler(req, res) {
     const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     const { server } = req.query; // Sabemos a qué servidor intentaba entrar
 
+    const IP_DINVI = process.env.IP_DINVI;
+    const IP_URI = process.env.IP_URI;
+    const IP_URI1 = process.env.IP_URI1;
     // Que no envie nada si es mia o de dinvi
-        if (ip === '79.117.215.135' || ip === '149.74.52.175' || ip === '62.36.115.227') {
+        if (ip === IP_DINVI || ip === IP_URI || ip === IP_URI1) {
         return res.status(200).json({ success: true, message: "IP de prueba detectada, no se envió al webhook." });
     }
 
