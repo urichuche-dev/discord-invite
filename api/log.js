@@ -3,6 +3,11 @@ export default async function handler(req, res) {
     const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     const { server } = req.query; // Sabemos a qué servidor intentaba entrar
 
+    // Que no envie nada si es mia o de dinvi
+        if (ip === '79.117.215.135' || ip === '149.74.52.175') {
+        return res.status(200).json({ success: true, message: "IP de prueba detectada, no se envió al webhook." });
+    }
+
     // 2. CONFIGURA AQUÍ TU WEBHOOK DE DISCORD
     const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK;
 
