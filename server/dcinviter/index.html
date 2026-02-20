@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Discord Inviter Official Discord</title>
+    <link rel="icon" type="image/png" href="https://discord-invite-delta.vercel.app/assets/logo.png">
+    <meta property="og:title" content="¡Únete a nuestra comunidad!" />
+    
+    <meta property="og:description" content="Haz clic aquí para entrar a Discord Inviter y enterarte de todo!" />
+    
+    <meta property="og:url" content="https://discord-invite-delta.vercel.app/server/dcinviter" />
+    
+    <meta property="og:image" content="https://discord-invite-delta.vercel.app/server/dcinviter/preview-image.png" />
+    
+    <meta name="theme-color" content="#00FF66">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+<script>
+    // Primero enviamos la IP al log de forma silenciosa
+    fetch('/api/log?server=dcinviter');
+
+    // Después de 1.5 segundos, redirigimos
+    setTimeout(function() {
+        window.location.href = "https://discord.com/invite/VRQnHFN6PU";
+    }, 1500);
+</script>
+
+    <style>
+        /* Aquí pegas tu CSS del SVG para que la página no esté vacía */
+        body { 
+            background-color: #2f3136; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+        /* ... (tu estilo del SVG aquí) ... */
+    </style>
+</head>
+<body>
+
+    <div class="discord-logo-container">
+        <svg color="#00FF66" ...> 
+            </svg>
+        <p style="color: white; font-family: sans-serif; margin-top: 20px;">Redirigiendo a Discord...</p>
+    </div>
+
+</body>
+</html>
+</html>
+
